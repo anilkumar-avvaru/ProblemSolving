@@ -28,14 +28,12 @@ public class DebugUtils {
             int x = arr.length;
             int y = arr[0].length;
             int[] maxVerticalLengths = new int[y];
-            System.out.println("myArray = "+java.util.Arrays.toString(arr[0]));
             for(int i=0; i<x; i++){
                 for(int j=0; j<y; j++){
                     String tmp = Integer.toString(arr[i][j]);
                     maxVerticalLengths[j] = Math.max(maxVerticalLengths[j], tmp.length());
                 }
             }
-            System.out.println("maxVerticalLengths = "+java.util.Arrays.toString(maxVerticalLengths));
             int dashes = 0;
             for(int i=0; i<y; i++){
                 dashes += maxVerticalLengths[i];

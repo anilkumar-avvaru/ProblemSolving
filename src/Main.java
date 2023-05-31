@@ -2,7 +2,9 @@
 // then press Enter. You can now see whitespace characters in your code.
 import com.problems.DebugUtils;
 public class Main {
+    private static final int INFINITY = -9999;
     public static void main(String[] args) {
+        //Min-Coins Change problem
         try{
             int[][] myArray = {
                     {0, 1, 2, 3, 123, 123, 123, 123},

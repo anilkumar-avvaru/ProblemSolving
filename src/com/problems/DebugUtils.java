@@ -11,31 +11,30 @@ public class DebugUtils {
         return spacedString;
     }
 
-    public void printTwoDimensionalArray(int[][] arr) throws Exception{
+    public void printTwoDimensionalArray(int[][] arr){
         prettyPrintTwoDimensionalArray(arr);
     }
 
-    public void printTwoDimensionalArray(int[][] arr, String arrayName) throws Exception{
+    public void printTwoDimensionalArray(int[][] arr, String arrayName){
         prettyPrintTwoDimensionalArray(arr, arrayName);
     }
 
-    private int prettyPrintTwoDimensionalArray(int[][] arr) throws Exception{
+    private int prettyPrintTwoDimensionalArray(int[][] arr){
         return prettyPrintTwoDimensionalArray(arr, null);
     }
-    private int prettyPrintTwoDimensionalArray(int[][] arr, String arrName) throws Exception{
+    private int prettyPrintTwoDimensionalArray(int[][] arr, String arrName){
         try{
             arrName = (arrName==null || arrName.trim().length()==0)?"--NoName--":arrName.trim();
             int x = arr.length;
             int y = arr[0].length;
             int[] maxVerticalLengths = new int[y];
-            System.out.println("myArray = "+java.util.Arrays.toString(arr[0]));
             for(int i=0; i<x; i++){
                 for(int j=0; j<y; j++){
                     String tmp = Integer.toString(arr[i][j]);
                     maxVerticalLengths[j] = Math.max(maxVerticalLengths[j], tmp.length());
                 }
             }
-            System.out.println("maxVerticalLengths = "+java.util.Arrays.toString(maxVerticalLengths));
+
             int dashes = 0;
             for(int i=0; i<y; i++){
                 dashes += maxVerticalLengths[i];
